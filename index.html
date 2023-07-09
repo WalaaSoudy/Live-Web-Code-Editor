@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Live Web Code Editor</title>
+  <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css.map"> -->
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+              margin: 0;
+              padding: 0;
+              height: 100vh;
+              display: flex;
+              flex-direction: column;
+            }
+            
+            .editor-container {
+              flex-grow: 1;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-gap: 10px;
+              padding: 10px;
+            }
+            
+            .editor {
+              height: 100%;
+              border: 1px solid #ccc;
+              resize: none;
+              padding: 5px;
+              font-family: monospace;
+            }
+            
+            .output {
+              flex-grow: 1;
+              border: 1px solid #ccc;
+              padding: 10px;
+              overflow: auto;
+              background-color: #f5f5f5;
+            }
+            
+            .btn-container {
+              display: flex;
+              justify-content: center;
+              margin-top: 10px;
+            }
+            
+            .btn {
+              padding: 8px 16px;
+              background-color: #4CAF50;
+              color: #fff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 14px;
+              margin-right: 10px;
+            }
+          </style>
+        
+</head>
+<body>
+    
+    <div class="editor-container">
+        <textarea id="html-editor" class="editor" placeholder="HTML"></textarea>
+        <textarea id="css-editor" class="editor" placeholder="CSS"></textarea>
+        <textarea id="js-editor" class="editor" placeholder="JavaScript"></textarea>
+      </div>
+      
+      <div class="btn-container">
+        <button class="btn" onclick="runCode()">Run</button>
+        <button class="btn" onclick="resetCode()">Reset</button>
+      </div>
+      
+      <div class="output">
+        <iframe id="output-frame" frameborder="0"></iframe>
+      </div>
+      
+      
+      
+
+  <script src="bootstrap.bundle.min.js" async defer></script>
+  <script src="bootstrap.bundle.min.js.map"></script>
+  <script src="script.js"></script>
+</body>
+</html>
